@@ -1,7 +1,7 @@
 {
   "name": "Actor Playground",
   "image": "hardliner66/eos:latest",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/eos/workspace,type=bind",
+  "workspaceMount": "source=${localWorkspaceFolder}/persist,target=/eos/persist,type=bind",
   "workspaceFolder": "/eos",
   "customizations": {
     "vscode": {
