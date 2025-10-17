@@ -1,8 +1,8 @@
 {
   "name": "Actor Playground",
   "image": "hardliner66/eos:latest",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/eos/workspace,type=bind",
+  "workspaceFolder": "/eos",
   "customizations": {
     "vscode": {
       "settings": {
@@ -22,5 +22,5 @@
     }
   },
   "remoteUser": "vscode",
-  "postStartCommand": "act spawn /usr/local/bin/script-actor --copy /workspace/examples/test-actor.rn"
+  "postStartCommand": "act spawn-script /workspace/examples/test-actor.rn"
 }
