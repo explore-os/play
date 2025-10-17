@@ -1,5 +1,4 @@
 pub fn handle(state, msg) {
-    state = #{};
     state["last_message"] = msg;
     return state;
 }
