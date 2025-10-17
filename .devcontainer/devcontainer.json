@@ -22,5 +22,6 @@
     }
   },
   "remoteUser": "vscode",
-  "postStartCommand": "eos spawn-script /eos/workspace/examples/test-actor.rn"
+  "shutdownAction": "stopContainer",
+  "postStartCommand": "$(setsid /usr/local/bin/supervisor); eos spawn-script /eos/workspace/examples/test-actor.rn"
 }
