@@ -22,5 +22,5 @@
     }
   },
   "remoteUser": "vscode",
-  "postStartCommand": "act spawn-script /workspace/examples/test-actor.rn"
+  "postStartCommand": "eos spawn-script /eos/workspace/examples/test-actor.rn"
 }
