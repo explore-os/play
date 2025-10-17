@@ -1,0 +1,26 @@
+{
+  "name": "Actor Playground",
+  "image": "hardliner66/eos:latest",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "fish",
+        "files.exclude": {
+          "**/.devcontainer": true,
+          "**/.git": true,
+          "**/.svn": true,
+          "**/.hg": true,
+          "**/.DS_Store": true,
+          "**/Thumbs.db": true
+        }
+      },
+      "extensions": [
+        "udoprog.rune-vscode"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "postStartCommand": "act spawn /usr/local/bin/script-actor --copy /workspace/examples/test-actor.rn"
+}
