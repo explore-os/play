@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ../persist:/explore/persist
+    command: /usr/local/bin/supervisor --force --db /explore/persist/.db
   msgbus:
     image: nats
     ports:
