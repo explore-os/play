@@ -1,1 +1,3 @@
 nohup.out
+persist/nats/*
+!persist/nats/.gitkeep

@@ -1,13 +1,17 @@
 {
   "name": "Actor Playground",
-  "image": "hardliner66/eos:latest",
-  "workspaceMount": "source=${localWorkspaceFolder}/persist,target=/eos/persist,type=bind",
-  "workspaceFolder": "/eos",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "eos",
+  "runServices": ["msgbus", "eos"],
+  "workspaceFolder": "/explore",
   "customizations": {
     "vscode": {
       "settings": {
         "terminal.integrated.defaultProfile.linux": "fish",
         "files.exclude": {
+          "/explore/persist/nats": true,
           "**/.devcontainer": true,
           "**/.git": true,
           "**/.svn": true,
@@ -20,7 +24,5 @@
         "udoprog.rune-vscode"
       ]
     }
-  },
-  "shutdownAction": "stopContainer",
-  "postStartCommand": "rm -f /eos/.pid; setsid /usr/local/bin/supervisor"
+  }
 }
