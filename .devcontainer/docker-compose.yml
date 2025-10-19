@@ -11,6 +11,8 @@ services:
 
   teleplot:
     image: teleplot
+    build:
+      dockerfile: external/teleplot/Dockerfile
     ports:
       - "8080:8080"
 
