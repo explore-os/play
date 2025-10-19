@@ -17,8 +17,17 @@
             {
               "name": "$(triangle-right) Ping Pong Demo",
               "command": "/explore/demos/ping-pong.sh",
-              "color": "green",
-              "singleInstance": true
+              "color": "green"
+            },
+            {
+              "name": "Pause System",
+              "command": "/usr/local/bin/eos pause /explore",
+              "color": "orange"
+            },
+            {
+              "name": "Unpause System",
+              "command": "/usr/local/bin/eos unpause /explore",
+              "color": "white"
             }
           ],
           "defaultColor": "green",
