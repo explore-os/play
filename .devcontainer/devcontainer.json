@@ -16,7 +16,7 @@
           "commands": [
             {
               "name": "$(triangle-right) Ping Pong Demo",
-              "command": "/explore/demo/ping-pong.sh",
+              "command": "/explore/demos/ping-pong.sh",
               "color": "green",
               "singleInstance": true
             }
