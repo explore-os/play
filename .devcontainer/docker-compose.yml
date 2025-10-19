@@ -10,7 +10,6 @@ services:
     command: /usr/local/bin/supervisor --force
 
   teleplot:
-    image: teleplot
     build:
       dockerfile: external/teleplot/Dockerfile
     ports:
