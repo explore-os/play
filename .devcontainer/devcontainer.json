@@ -28,6 +28,11 @@
               "name": "Unpause System",
               "command": "/usr/local/bin/eos unpause /explore",
               "color": "white"
+            },
+            {
+              "name": "Kill All Actors",
+              "command": "/usr/local/bin/eos kill /explore/actors/*",
+              "color": "red"
             }
           ],
           "defaultColor": "green",
