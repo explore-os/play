@@ -4,11 +4,27 @@
     "docker-compose.yml"
   ],
   "service": "eos",
-  "runServices": ["msgbus", "eos"],
+  "runServices": [
+    "msgbus",
+    "eos"
+  ],
   "workspaceFolder": "/explore",
   "customizations": {
     "vscode": {
       "settings": {
+        "actionButtons": {
+          "commands": [
+            {
+              "name": "$(triangle-right) Ping Pong Demo",
+              "command": "/explore/demo/ping-pong.sh",
+              "color": "green",
+              "singleInstance": true
+            }
+          ],
+          "defaultColor": "green",
+          "reloadButton": "↻",
+          "loadNpmCommands": false
+        },
         "terminal.integrated.defaultProfile.linux": "fish",
         "files.exclude": {
           "/explore/persist/nats": true,
@@ -21,7 +37,8 @@
         }
       },
       "extensions": [
-        "udoprog.rune-vscode"
+        "udoprog.rune-vscode",
+        "seunlanlege.action-buttons"
       ]
     }
   }
