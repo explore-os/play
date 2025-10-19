@@ -36,7 +36,6 @@
         },
         "terminal.integrated.defaultProfile.linux": "fish",
         "files.exclude": {
-          "/explore/persist/nats": true,
           "**/.devcontainer": true,
           "**/.git": true,
           "**/.svn": true,

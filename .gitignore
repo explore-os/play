@@ -1,5 +1,1 @@
 nohup.out
-persist/.db/*
-!persist/.db/.gitkeep
-persist/nats/*
-!persist/nats/.gitkeep

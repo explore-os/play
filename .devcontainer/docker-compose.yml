@@ -5,8 +5,8 @@ services:
     build:
       dockerfile: Dockerfile
     volumes:
-      - ../persist:/explore/persist
-      - storage:/explore/actors/storage
+      - ../workspace:/explore/workspace
+      - storage:/explore/storage
     command: /usr/local/bin/supervisor --force
     network_mode: host
 
