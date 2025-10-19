@@ -1,3 +1,0 @@
-[submodule ".devcontainer/extern/teleplot"]
-	path = .devcontainer/extern/teleplot
-	url = https://github.com/nesnes/teleplot

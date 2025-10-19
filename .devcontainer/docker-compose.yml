@@ -9,12 +9,6 @@ services:
       - storage:/explore/actors/storage
     command: /usr/local/bin/supervisor --force
 
-  teleplot:
-    build:
-      dockerfile: external/teleplot/Dockerfile
-    ports:
-      - "8080:8080"
-
   msgbus:
     image: nats
     ports:
