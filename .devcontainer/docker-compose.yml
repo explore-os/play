@@ -8,12 +8,12 @@ services:
       - ../persist:/explore/persist
       - storage:/explore/actors/storage
     command: /usr/local/bin/supervisor --force
+    network_mode: host
 
   msgbus:
     image: nats
-    ports:
-      - "8222:8222"
     command: "--server_name eos_hub --cluster_name EOS --cluster nats://0.0.0.0:6222 --http_port 8222"
+    network_mode: host
 
 volumes:
   storage:

@@ -4,7 +4,6 @@
     "docker-compose.yml"
   ],
   "service": "eos",
-  "forwardPorts": ["teleplot:8080"],
   "workspaceFolder": "/explore",
   "customizations": {
     "vscode": {
@@ -48,7 +47,8 @@
       },
       "extensions": [
         "udoprog.rune-vscode",
-        "seunlanlege.action-buttons"
+        "seunlanlege.action-buttons",
+        "alexnesnes.teleplot"
       ]
     }
   }
