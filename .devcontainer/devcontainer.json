@@ -6,8 +6,12 @@
   "service": "eos",
   "runServices": [
     "msgbus",
-    "eos"
+    "eos",
+    "otelcol",
+    "prometheus",
+    "grafana"
   ],
+  "forwardPorts": [3000, 9090, 4317, 4318],
   "workspaceFolder": "/explore",
   "customizations": {
     "vscode": {
@@ -55,4 +59,6 @@
       ]
     }
   }
+  ,
+  "postCreateCommand": "echo 'Grafana: http://localhost:3000 (user: admin, password: admin)'; echo 'Prometheus: http://localhost:9090'; echo 'OTLP endpoints: 4317 (gRPC), 4318 (HTTP)'"
 }
