@@ -9,6 +9,13 @@ services:
       - storage:/storage
     command: /usr/local/bin/supervisor --force --db /storage/db
 
+  dashboard:
+    image: hardliner66/eos-dash
+    depends_on:
+      - eos
+    ports:
+      - "4000:4000"
+
   msgbus:
     image: nats
     ports:

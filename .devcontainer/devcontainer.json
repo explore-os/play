@@ -8,6 +8,7 @@
     "msgbus",
     "eos"
   ],
+  "forwardPorts": ["4000:4000"],
   "workspaceFolder": "/explore",
   "customizations": {
     "vscode": {
