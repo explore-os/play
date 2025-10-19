@@ -16,8 +16,7 @@
           "commands": [
             {
               "name": "$(triangle-right) Ping Pong Demo",
-              "command": "/explore/demos/ping-pong.sh",
-              "color": "green"
+              "command": "/explore/demos/ping-pong.sh"
             },
             {
               "name": "Pause System",
@@ -27,7 +26,7 @@
             {
               "name": "Unpause System",
               "command": "/usr/local/bin/eos unpause /explore",
-              "color": "white"
+              "color": "green"
             },
             {
               "name": "Kill All Actors",
@@ -35,7 +34,7 @@
               "color": "red"
             }
           ],
-          "defaultColor": "green",
+          "defaultColor": "white",
           "reloadButton": "↻",
           "loadNpmCommands": false
         },
