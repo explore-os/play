@@ -4,10 +4,7 @@
     "docker-compose.yml"
   ],
   "service": "eos",
-  "runServices": [
-    "msgbus",
-    "eos"
-  ],
+  "forwardPorts": ["teleplot:8080"],
   "workspaceFolder": "/explore",
   "customizations": {
     "vscode": {

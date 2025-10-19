@@ -8,7 +8,7 @@ FROM hardliner66/eos:latest
 
 COPY --from=go /nats /usr/local/bin
 
-RUN mkdir -p /storage/db && chown -R vscode:vscode /storage
+RUN mkdir -p /explore/actors/storage && chown -R vscode:vscode /explore/actors/storage
 
 USER vscode
 

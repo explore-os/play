@@ -6,8 +6,13 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ../persist:/explore/persist
-      - storage:/storage
-    command: /usr/local/bin/supervisor --force --db /storage/db
+      - storage:/explore/actors/storage
+    command: /usr/local/bin/supervisor --force
+
+  teleplot:
+    image: teleplot
+    ports:
+      - "8080:8080"
 
   msgbus:
     image: nats
