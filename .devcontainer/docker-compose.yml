@@ -11,6 +11,9 @@ services:
 
   teleplot:
     image: hardliner66/eos-teleplot:latest
+    networks:
+      teleplot_net:
+        ipv4_address: 10.5.0.10
     ports:
       - "47269:47269/udp"
 
@@ -20,3 +23,11 @@ services:
 
 volumes:
   storage:
+
+networks:
+  teleplot_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
