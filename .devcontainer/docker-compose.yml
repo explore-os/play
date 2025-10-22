@@ -10,7 +10,7 @@ services:
     command: /usr/local/bin/supervisor --force
 
   teleplot:
-    image: hardliner66/teleplot:latest
+    image: hardliner66/eos-teleplot:latest
 
   msgbus:
     image: nats
