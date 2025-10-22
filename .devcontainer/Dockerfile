@@ -1,5 +1,4 @@
-
-FROM mcr.microsoft.com/vscode/devcontainers/go AS go
+FROM go AS go
 
 RUN go install github.com/nats-io/natscli/nats@latest
 RUN cp "$(which nats)" /

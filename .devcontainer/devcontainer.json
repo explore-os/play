@@ -5,7 +5,10 @@
   ],
   "service": "eos",
   "workspaceFolder": "/explore",
-  "forwardPorts": ["teleplot:8080"],
+  "forwardPorts": [
+    8080,
+    "teleplot:8080"
+  ],
   "customizations": {
     "vscode": {
       "settings": {
