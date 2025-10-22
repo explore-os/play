@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-VSIX_PATH="/ext/teleprompt-eos.vsix}"
+VSIX_PATH="/ext/teleplot-eos.vsix"
 
-SERVER_DIR="${VSCODE_AGENT_FOLDER:-$HOME/.vscode-server}"
-[ -d "$HOME/.vscode-server-insiders" ] && SERVER_DIR="$HOME/.vscode-server-insiders"
-[ -d "$HOME/.vscode-oss" ] && SERVER_DIR="$HOME/.vscode-oss"
-
+SERVER_DIR="$HOME/.vscode-remote"
 EXT_DIR="$SERVER_DIR/extensions"
 mkdir -p "$EXT_DIR"
 
