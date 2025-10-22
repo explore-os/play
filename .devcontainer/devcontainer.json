@@ -47,8 +47,7 @@
       },
       "extensions": [
         "udoprog.rune-vscode",
-        "seunlanlege.action-buttons",
-        "alexnesnes.teleplot"
+        "seunlanlege.action-buttons"
       ]
     }
   }
