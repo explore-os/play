@@ -9,9 +9,6 @@ services:
       - storage:/explore/storage
     command: /usr/local/bin/supervisor --force
 
-  teleplot:
-    image: hardliner66/eos-teleplot:latest
-
   msgbus:
     image: nats
     command: "--server_name eos_hub --cluster_name EOS --cluster nats://0.0.0.0:6222 --http_port 8222"
