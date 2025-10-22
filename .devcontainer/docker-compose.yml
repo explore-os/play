@@ -11,6 +11,8 @@ services:
 
   teleplot:
     image: hardliner66/eos-teleplot:latest
+    ports:
+      - "47269:47269/udp"
 
   msgbus:
     image: nats
