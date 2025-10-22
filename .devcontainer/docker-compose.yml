@@ -8,12 +8,13 @@ services:
       - ../workspace:/explore/workspace
       - storage:/explore/storage
     command: /usr/local/bin/supervisor --force
-    network_mode: host
+
+  teleplot:
+    image: hardliner66/teleplot:latest
 
   msgbus:
     image: nats
     command: "--server_name eos_hub --cluster_name EOS --cluster nats://0.0.0.0:6222 --http_port 8222"
-    network_mode: host
 
 volumes:
   storage:
