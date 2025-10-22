@@ -50,5 +50,6 @@
         "seunlanlege.action-buttons"
       ]
     }
-  }
+  },
+  "postCreateCommand": "/ext/install-private-vsix.sh"
 }
