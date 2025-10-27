@@ -16,17 +16,17 @@
                         },
                         {
                             "name": "Pause System",
-                            "command": "/usr/local/bin/eos pause /explore",
+                            "command": "/usr/local/bin/eos pause",
                             "color": "orange"
                         },
                         {
                             "name": "Unpause System",
-                            "command": "/usr/local/bin/eos unpause /explore",
+                            "command": "/usr/local/bin/eos unpause",
                             "color": "green"
                         },
                         {
                             "name": "Kill All Actors",
-                            "command": "/usr/local/bin/eos kill /explore/actors/*",
+                            "command": "/usr/local/bin/eos kill /explore/system/actors/*",
                             "color": "red"
                         }
                     ],
