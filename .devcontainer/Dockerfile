@@ -13,8 +13,6 @@ COPY install-private-vsix.sh /ext/install-private-vsix.sh
 RUN chmod +x /ext/install-private-vsix.sh && chown -R vscode:vscode /ext
 RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-
-
 USER vscode
 
 RUN nats context add default --server msgbus:4222 --description "default" --select
