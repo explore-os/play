@@ -3,7 +3,7 @@
     "dockerComposeFile": ["docker-compose.yml"],
     "service": "eos",
     "workspaceFolder": "/explore",
-    "postAttachCommand": "/usr/local/bin/eos mount /explore/system",
+    "capAdd": ["SYS_ADMIN"],
     "customizations": {
         "vscode": {
             "settings": {
