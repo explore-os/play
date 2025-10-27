@@ -5,7 +5,6 @@ services:
         image: hardliner66/eos:latest
         volumes:
             - ../workspace:/explore/workspace
-        command: /usr/local/bin/eos serve
         cap_add:
           - SYS_ADMIN
 
