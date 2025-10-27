@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/go AS go
 RUN go install github.com/nats-io/natscli/nats@latest
 RUN cp "$(which nats)" /
 
-FROM hardliner66/eos:dev
+FROM hardliner66/eos
 
 COPY --from=go /nats /usr/local/bin
 
