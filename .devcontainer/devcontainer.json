@@ -4,7 +4,7 @@
     "service": "eos",
     "workspaceFolder": "/explore",
     "capAdd": ["SYS_ADMIN"],
-    "postStartCommand": "/mount-eos.sh",
+    "postAttachCommand": "/mount-eos.sh",
     "customizations": {
         "vscode": {
             "settings": {
