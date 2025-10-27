@@ -1,54 +1,50 @@
 {
-  "name": "Actor Playground",
-  "dockerComposeFile": [
-    "docker-compose.yml"
-  ],
-  "service": "eos",
-  "workspaceFolder": "/explore",
-  "customizations": {
-    "vscode": {
-      "settings": {
-        "actionButtons": {
-          "commands": [
-            {
-              "name": "$(triangle-right) Ping Pong Demo",
-              "command": "/explore/demos/ping-pong.sh"
+    "name": "Actor Playground",
+    "dockerComposeFile": ["docker-compose.yml"],
+    "service": "eos",
+    "workspaceFolder": "/explore",
+    "postAttachCommand": "/usr/local/bin/eos mount /explore/system",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "actionButtons": {
+                    "commands": [
+                        {
+                            "name": "$(triangle-right) Ping Pong Demo",
+                            "command": "/explore/demos/ping-pong.sh"
+                        },
+                        {
+                            "name": "Pause System",
+                            "command": "/usr/local/bin/eos pause /explore",
+                            "color": "orange"
+                        },
+                        {
+                            "name": "Unpause System",
+                            "command": "/usr/local/bin/eos unpause /explore",
+                            "color": "green"
+                        },
+                        {
+                            "name": "Kill All Actors",
+                            "command": "/usr/local/bin/eos kill /explore/actors/*",
+                            "color": "red"
+                        }
+                    ],
+                    "defaultColor": "white",
+                    "reloadButton": "↻",
+                    "loadNpmCommands": false
+                },
+                "terminal.integrated.defaultProfile.linux": "fish",
+                "files.exclude": {
+                    "**/.devcontainer": true,
+                    "**/.git": true,
+                    "**/.svn": true,
+                    "**/.hg": true,
+                    "**/.DS_Store": true,
+                    "**/Thumbs.db": true
+                }
             },
-            {
-              "name": "Pause System",
-              "command": "/usr/local/bin/eos pause /explore",
-              "color": "orange"
-            },
-            {
-              "name": "Unpause System",
-              "command": "/usr/local/bin/eos unpause /explore",
-              "color": "green"
-            },
-            {
-              "name": "Kill All Actors",
-              "command": "/usr/local/bin/eos kill /explore/actors/*",
-              "color": "red"
-            }
-          ],
-          "defaultColor": "white",
-          "reloadButton": "↻",
-          "loadNpmCommands": false
-        },
-        "terminal.integrated.defaultProfile.linux": "fish",
-        "files.exclude": {
-          "**/.devcontainer": true,
-          "**/.git": true,
-          "**/.svn": true,
-          "**/.hg": true,
-          "**/.DS_Store": true,
-          "**/Thumbs.db": true
+            "extensions": ["udoprog.rune-vscode", "seunlanlege.action-buttons"]
         }
-      },
-      "extensions": [
-        "udoprog.rune-vscode",
-        "seunlanlege.action-buttons"
-      ]
-    }
-  },
-  "postCreateCommand": "/ext/install-private-vsix.sh"
+    },
+    "postCreateCommand": "/ext/install-private-vsix.sh"
 }

@@ -1,17 +1,16 @@
 services:
-  eos:
-    depends_on:
-      - msgbus
-    build:
-      dockerfile: Dockerfile
-    volumes:
-      - ../workspace:/explore/workspace
-      - storage:/explore/storage
-    command: /usr/local/bin/supervisor --force
+    eos:
+        depends_on:
+            - msgbus
+        build:
+            dockerfile: Dockerfile
+        volumes:
+            - ../workspace:/explore/workspace
+        command: /usr/local/bin/eos serve
 
-  msgbus:
-    image: nats
-    command: "--server_name eos_hub --cluster_name EOS --cluster nats://0.0.0.0:6222 --http_port 8222"
+    msgbus:
+        image: nats
+        command: "--server_name eos_hub --cluster_name EOS --cluster nats://0.0.0.0:6222 --http_port 8222"
 
 volumes:
-  storage:
+    storage:
