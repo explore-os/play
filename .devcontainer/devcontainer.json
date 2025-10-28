@@ -1,10 +1,9 @@
 {
     "name": "Actor Playground",
-    "dockerComposeFile": ["docker-compose.yml"],
-    "service": "eos",
-    "workspaceFolder": "/explore",
+    "image": "hardliner66/eos",
     "capAdd": ["SYS_ADMIN"],
-    "postAttachCommand": "/mount-eos.sh",
+    "workspaceFolder": "/explore",
+    "workspaceMount": "type=bind,source=${localWorkspaceFolder}/workspace,target=/explore/workspace",
     "customizations": {
         "vscode": {
             "settings": {
