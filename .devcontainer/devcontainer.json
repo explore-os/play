@@ -4,6 +4,7 @@
     "capAdd": ["SYS_ADMIN"],
     "workspaceFolder": "/explore",
     "workspaceMount": "type=bind,source=${localWorkspaceFolder}/workspace,target=/explore/workspace",
+    "overrideCommand": false,
     "customizations": {
         "vscode": {
             "settings": {
